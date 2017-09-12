@@ -1,0 +1,21 @@
+<div class="panel panel-default object">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{name}}</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+        {{full_path}}</div>
+        <code>{{json}}</code>
+        {% if objects %}
+        <div class="well">
+            <h4>used by</h4>
+            {% for obj in objects %}
+                <span class="list-item">
+                    <a href="/asset-doc/object/{{obj}}.html">{{obj}}</a>
+                </span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+  </div>
+</div>

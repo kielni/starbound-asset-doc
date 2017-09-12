@@ -1,0 +1,36 @@
+<h2>Status effect properties</h2>
+
+<ul class="list-group objects">
+{% for prop in props | dictsort %}
+    <li class="list-group-item">
+        <div style="vertical-align: top">
+            <h4>
+                {{prop[0]}}
+                <code>{{prop[1]['type']}}</code>
+                <div class="pull-right">
+                    <a class="btn btn-xs btn-primary" data-toggle="collapse" href="#{{prop[0]}}Collapse" aria-expanded="false" aria-controls="{{prop[0]}}Collapse">
+                        <span>{{ prop[1]['objects'] | length }}</span>
+                        <span class="glyphicon glyphicon-menu-down"></span>
+                    </a>
+                </div>
+            </h4>
+        </div>
+        <div>
+            {% for val in prop[1]['values'] %}
+                <div class="value">"{{val}}"</div>
+            {% endfor %}
+            {% if prop[1]['value_count'] > 10 %}
+            <br>... {{prop[1]['value_count']}} unique values
+            {% endif %}
+        </div>
+
+        <div class="collapse well" id="{{prop[0]}}Collapse">
+        {% for obj in prop[1]['objects'] %}
+            <span class="list-item">
+                <a href="/asset-doc/statuseffect/{{obj}}.html">{{obj}}</a>
+            </span>
+        {% endfor %}
+        </div>
+    </li>
+{% endfor %}
+</ul>
