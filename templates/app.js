@@ -1,13 +1,13 @@
 function setupSearch() {
     $.get('/asset-doc/objects.json').then((resp) => {
-        var objects = JSON.parse(resp);
+        var objects = (typeof resp === 'string') ? JSON.parse(resp) : resp;
         var bh = new Bloodhound({
             datumTokenizer: function(d) {
                 return Bloodhound.tokenizers.whitespace(`${d.name} ${d.description}`);
             },
             queryTokenizer: Bloodhound.tokenizers.whitespace,
             identify: function(obj) { return obj.name; },
-            local: JSON.parse(resp),
+            local: objects,
             cache: false,
         });
         var params = {hint: true, highlight: true, minLength: 2};
@@ -29,4 +29,8 @@ function setupSearch() {
         });
         console.log('typeahead init')
     });
+
+  $('code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
 }
