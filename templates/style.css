@@ -9,11 +9,11 @@ code {
     color: #3a3f44;
     background-color: #f5f5f5;
 }
-code a, code a:hover {
-    color: #007bff;
+code a .hljs, code a .hljs:hover {
+    color: #007bff !important
 }
-code a:hover, code a:focus {
-    color: #0056b3;
+code a .hljs:hover, code a .hljs:focus {
+    color: #0056b3 !important;
 }
 .objects .value {
     display: inline-block;
