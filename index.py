@@ -234,7 +234,8 @@ def main():
     write_json(obj['objects'], effects['effects'], out_path)
     shutil.copy('templates/style.css', '%s/style.css' % out_path)
     shutil.copy('templates/app.js', '%s/app.js' % out_path)
-
+    write_file('%s/index.html' % out_path, [header, read_template('index'), footer],
+        {'objects': '{:,}'.format(len(obj['objects'])), 'effects': '{:,}'.format(len(effects['effects']))})
     os.chdir(args.path)
     with socketserver.TCPServer(('', args.port), http.server.SimpleHTTPRequestHandler) as httpd:
         print('load http://localhost:%s/index.html in a browser' % args.port)
