@@ -4,7 +4,7 @@ Generate searchable documentation for a tree of Starbound.
 
 The easiest way to get started making mods for Starbound is to start with the
 stock Starbound assets. What goes into an object file? What status effects can you
-use? Unpacking the stock Starbdound assets results in a directory tree with
+use? Unpacking the stock Starbound assets results in a directory tree with
 thousands of files, and no easy way to navigate through them. This project reads
 object and status effect files, generates documentation files, and runs
 a web server for browsing the content.
@@ -61,11 +61,14 @@ from Starbound directory
 
 - get the location of your unpacked Starbound assets (here: `unpacked/` under the Starbound directory)
 
-- in the Starbound directory (ie: Steam/steamapps/common/Starbound)
+- in a terminal the Starbound directory (ie: Steam/steamapps/common/Starbound)
 
     git clone https://github.com/kielni/starbound-asset-doc.git
     cd starbound-asset-doc
     pip install -r requirements.txt
+
+- then run this to index the content and start the server
+
     python3 index.py ../unpacked
 
 - go to http://localhost:8000/asset-doc/index.html to browse the generated docs
