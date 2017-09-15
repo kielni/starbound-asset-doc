@@ -35,13 +35,12 @@ code.type.hljs, code.type {
     padding: 5px 10px;
     text-align: center;
 }
-.tt-menu {
-    background-color: #000;
-}
 .tt-suggestion {
     padding: 5px 10px;
 }
 .tt-menu {
+    background-color: #000;
+    min-width: 300px;
     max-height: 250px;
     overflow-y: auto;
 }
