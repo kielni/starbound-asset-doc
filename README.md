@@ -63,9 +63,11 @@ from `Starbound` directory
 
 - in a terminal in the Starbound directory (ie: `Steam/steamapps/common/Starbound`)
 
-    git clone https://github.com/kielni/starbound-asset-doc.git
-    cd starbound-asset-doc
-    pip install -r requirements.txt
+```
+git clone https://github.com/kielni/starbound-asset-doc.git
+cd starbound-asset-doc
+pip install -r requirements.txt
+```
 
 - index the content and start the server
 
