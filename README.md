@@ -71,7 +71,9 @@ pip install -r requirements.txt
 
 - index the content and start the server
 
-    python3 index.py ../unpacked
+```
+python3 index.py ../unpacked
+```
 
 - go to http://localhost:8000/asset-doc/index.html to browse the generated docs
 
