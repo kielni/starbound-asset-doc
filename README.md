@@ -1,6 +1,6 @@
 # Starbound asset-doc
 
-Generate searchable documentation for a tree of Starbound.
+Generate searchable documentation for a tree of Starbound assets.
 
 The easiest way to get started making mods for Starbound is to start with the
 stock Starbound assets. What goes into an object file? What status effects can you
@@ -53,7 +53,7 @@ It also displays a list of linked objects that use the effect.
 
 a tree of <a href="https://starbounder.org/Modding:Basics#Step_1_-_Unpacking_Assets">unpacked Starbound assets</a>
 
-from Starbound directory
+from `Starbound` directory
 - Mac: `osx/asset_unpacker assets/packed.pak unpacked`
 - Windows: `win32\asset_unpacker.exe assets\packed.pak unpacked`
 
@@ -61,13 +61,13 @@ from Starbound directory
 
 - get the location of your unpacked Starbound assets (here: `unpacked/` under the Starbound directory)
 
-- in a terminal the Starbound directory (ie: Steam/steamapps/common/Starbound)
+- in a terminal in the Starbound directory (ie: `Steam/steamapps/common/Starbound`)
 
     git clone https://github.com/kielni/starbound-asset-doc.git
     cd starbound-asset-doc
     pip install -r requirements.txt
 
-- then run this to index the content and start the server
+- index the content and start the server
 
     python3 index.py ../unpacked
 
